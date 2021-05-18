@@ -4,7 +4,13 @@ import ScrollToTop from "./component/scrollToTop";
 
 import { Home } from "./views/home";
 import { Demo } from "./views/demo";
+import { Intro } from "./views/intro";
+import { Mackbook } from "./views/mackbook";
+import { Phone } from "./views/phone";
+import { Watch } from "./views/watch";
 import { Single } from "./views/single";
+import { SignIn } from "./views/signIn";
+import { SignUp } from "./views/signUp";
 import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
@@ -23,7 +29,25 @@ const Layout = () => {
 					<Navbar />
 					<Switch>
 						<Route exact path="/">
+							<Intro />
+						</Route>
+						<Route exact path="/home">
 							<Home />
+						</Route>
+						<Route exact path="/mackbook">
+							<Mackbook />
+						</Route>
+						<Route exact path="/phone">
+							<Phone />
+						</Route>
+						<Route exact path="/watch">
+							<Watch />
+						</Route>
+						<Route exact path="/signin">
+							<SignIn />
+						</Route>
+						<Route exact path="/signup">
+							<SignUp />
 						</Route>
 						<Route exact path="/demo">
 							<Demo />

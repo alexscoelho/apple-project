@@ -1,3 +1,15 @@
-/* 
-    General Styles
-*/
+$font-stack: Poppins, sans-serif;
+$primary-color: white;
+
+body {
+  font-family: $font-stack;
+  background-color: $primary-color;
+}
+
+.black-box-icon {
+  background-color: black;
+  padding: 9px 14px;
+  .apple {
+    color: white;
+  }
+}
