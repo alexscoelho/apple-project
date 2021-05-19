@@ -1,5 +1,4 @@
 import React from "react";
-import "../../styles/watch.scss";
 import { IoWatch } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
@@ -7,6 +6,7 @@ import PropTypes from "prop-types";
 export const ProductBody = ({ product, title, description, other, productImage }) => {
 	return (
 		<div className="jumbotron jumbotron-fluid">
+			{/* <div className="hermano"> */}
 			<div className="container">
 				<div className="row">
 					<div className="col-md-5">
@@ -39,7 +39,11 @@ export const ProductBody = ({ product, title, description, other, productImage }
 					</div>
 				</div>
 			</div>
+			{/* <div className="col-md-5">
+					<img src={productImage} className="img-fluid" alt={productImage} />
+				</div> */}
 		</div>
+		// </div>
 	);
 };
 

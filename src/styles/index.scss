@@ -32,6 +32,8 @@ body {
 @media (max-width: 800px) {
   .container ul {
     flex-direction: row;
+    // justify-content: ;
+    // align items
   }
   .container ul li {
     margin: 10px;
