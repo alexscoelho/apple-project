@@ -2,13 +2,14 @@ import React from "react";
 import "../../styles/watch.scss";
 import blackWatch from "../../img/Black Watch-1.png";
 import { IoWatch } from "react-icons/io5";
+import { Link } from "react-router-dom";
 
 export const Watch = () => (
 	<>
 		<div className="jumbotron jumbotron-fluid">
 			<div className="container">
 				<div className="row">
-					<div className="col-5">
+					<div className="col-md-5">
 						<p className="text-danger">Apple Watch</p>
 						<h1 className="display-4 ">Change starts within.</h1>
 						<p className="lead ">
@@ -16,19 +17,25 @@ export const Watch = () => (
 						</p>
 						<p className="text-danger">Starts shipping MM-DD-YYY</p>
 					</div>
-					<div className="col-5">
+					<div className="col-md-5">
 						<img src={blackWatch} className="img-fluid" alt={blackWatch} />
 					</div>
-					<div className="col-2 d-flex align-items-center">
+					<div className="col-sm d-flex align-items-center">
 						<ul className="right-side-icons">
 							<li>
-								<i className="fas fa-mobile-alt" />
+								<Link to="/phone">
+									<i className="fas fa-mobile-alt" />
+								</Link>
 							</li>
 							<li>
-								<i className="fas fa-laptop" />
+								<Link to="/mackbook">
+									<i className="fas fa-laptop" />
+								</Link>
 							</li>
 							<li>
-								<IoWatch />
+								<Link to="/watch">
+									<IoWatch />
+								</Link>
 							</li>
 						</ul>
 					</div>
