@@ -6,10 +6,34 @@ body {
   background-color: $primary-color;
 }
 
+// navbar
 .black-box-icon {
   background-color: black;
   padding: 9px 14px;
   .apple {
     color: white;
+  }
+}
+
+// product body
+.right-side-icons {
+  list-style-type: none;
+}
+
+.container ul {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  li {
+    margin: auto;
+  }
+}
+
+@media (max-width: 800px) {
+  .container ul {
+    flex-direction: row;
+  }
+  .container ul li {
+    margin: 10px;
   }
 }

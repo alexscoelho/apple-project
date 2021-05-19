@@ -1,12 +1,18 @@
 import React from "react";
 import "../../styles/watch.scss";
+import { ProductBody } from "../component/productBody";
 import blackWatch from "../../img/Black Watch-1.png";
-import { IoWatch } from "react-icons/io5";
-import { Link } from "react-router-dom";
 
 export const Watch = () => (
 	<>
-		<div className="jumbotron jumbotron-fluid">
+		<ProductBody
+			product="Apple Watch"
+			title="Change starts within."
+			description="This is a modified jumbotron that occupies the entire horizontal space of its parent."
+			other="Starts shipping MM-DD-YYY"
+			productImage={blackWatch}
+		/>
+		{/* <div className="jumbotron jumbotron-fluid">
 			<div className="container">
 				<div className="row">
 					<div className="col-md-5">
@@ -41,7 +47,7 @@ export const Watch = () => (
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> */}
 		<div className="container">
 			<div className="row">
 				<div className="col-6">

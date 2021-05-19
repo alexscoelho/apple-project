@@ -1,21 +1,21 @@
-.right-side-icons {
-  list-style-type: none;
-}
+// .right-side-icons {
+//   list-style-type: none;
+// }
 
-.container ul {
-  display: flex;
-  flex-direction: column;
-  list-style-type: none;
-  li {
-    margin: auto;
-  }
-}
+// .container ul {
+//   display: flex;
+//   flex-direction: column;
+//   list-style-type: none;
+//   li {
+//     margin: auto;
+//   }
+// }
 
-@media (max-width: 800px) {
-  .container ul {
-    flex-direction: row;
-  }
-  .container ul li {
-    margin: 10px;
-  }
-}
+// @media (max-width: 800px) {
+//   .container ul {
+//     flex-direction: row;
+//   }
+//   .container ul li {
+//     margin: 10px;
+//   }
+// }
