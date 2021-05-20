@@ -1,8 +1,38 @@
 import React from "react";
-import "../../styles/home.scss";
+import "../../styles/signup.scss";
 
-export const SignIn = () => (
-	<div className="text-center mt-5">
-		<h1>SignUp</h1>
-	</div>
-);
+export const SignUp = () => {
+	return (
+		<div className="container ">
+			<div className="row justify-content-center">
+				<div className="col-md-4 border p-5 sign-up-form">
+					<h2 className="signup-title">Sign-up</h2>
+					<form>
+						<div className="form-group">
+							<label htmlFor="exampleInputEmail1">Full Name</label>
+							<input
+								type="email"
+								className="form-control"
+								id="exampleInputEmail1"
+								aria-describedby="emailHelp"
+							/>
+						</div>
+						<div className="form-group">
+							<label htmlFor="exampleInputPassword1">Email</label>
+							<input type="password" className="form-control" id="exampleInputPassword1" />
+						</div>
+						<div className="form-group">
+							<label htmlFor="exampleInputPassword1">Password</label>
+							<input type="password" className="form-control" id="exampleInputPassword1" />
+						</div>
+						<div className="sign-up-button">
+							<button type="submit" className="btn btn-primary">
+								Sign-Up
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	);
+};

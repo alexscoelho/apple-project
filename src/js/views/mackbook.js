@@ -8,7 +8,7 @@ import "../../styles/mackbook.scss";
 export const Mackbook = () => {
 	return (
 		<>
-			<div className="jumbotron jumbotron-fluid bg-dark mackbook-body">
+			<div className="jumbotron jumbotron-fluid mackbook-body">
 				<div className="container">
 					<div className="row">
 						<div className="col-md-5">

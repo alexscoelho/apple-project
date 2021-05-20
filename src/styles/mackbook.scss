@@ -1,9 +1,10 @@
 .mackbook-body {
-  background: linear-gradient(to right, black, rgb(102, 99, 99));
+  //   background: linear-gradient(to right, black, #666363);
+  background: #080808;
 }
 
 .mackbook {
-  mix-blend-mode: hard-light;
+  opacity: 0.5;
 }
 
 .subscribe-now {

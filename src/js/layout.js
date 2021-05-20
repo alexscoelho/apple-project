@@ -26,7 +26,7 @@ const Layout = () => {
 		<div className="d-flex flex-column">
 			<BrowserRouter basename={basename}>
 				<ScrollToTop>
-					<Navbar />
+					{/* <Navbar /> */}
 					<Switch>
 						<Route exact path="/">
 							<Intro />
@@ -35,12 +35,15 @@ const Layout = () => {
 							<Home />
 						</Route>
 						<Route exact path="/mackbook">
+							<Navbar />
 							<Mackbook />
 						</Route>
 						<Route exact path="/phone">
+							<Navbar />
 							<Phone />
 						</Route>
 						<Route exact path="/watch">
+							<Navbar />
 							<Watch />
 						</Route>
 						<Route exact path="/signin">
