@@ -33,6 +33,12 @@ body {
   background: linear-gradient(to right, rgba(252, 247, 247, 0.925), white);
 }
 
+@media (max-width: 768px) {
+  .product-image {
+    text-align: center;
+  }
+}
+
 @media (max-width: 800px) {
   .container ul {
     flex-direction: row;

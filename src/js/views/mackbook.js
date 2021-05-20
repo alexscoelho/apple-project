@@ -3,11 +3,12 @@ import { Link } from "react-router-dom";
 import { IoWatch } from "react-icons/io5";
 import mackbook from "../../img/shutterstock_-1.png";
 import desktop from "../../img/shutterstock_-2.png";
+import "../../styles/mackbook.scss";
 
 export const Mackbook = () => {
 	return (
 		<>
-			<div className="jumbotron jumbotron-fluid bg-dark">
+			<div className="jumbotron jumbotron-fluid bg-dark mackbook-body">
 				<div className="container">
 					<div className="row">
 						<div className="col-md-5">
@@ -26,7 +27,7 @@ export const Mackbook = () => {
 							</div>
 						</div>
 						<div className="col-md-5">
-							<img src={mackbook} className="img-fluid" alt={mackbook} />
+							<img src={mackbook} className="img-fluid mackbook" alt={mackbook} />
 						</div>
 						<div className="col-sm d-flex align-items-center">
 							<ul className="right-side-icons">
@@ -58,16 +59,16 @@ export const Mackbook = () => {
 					<div className="col-md-5">
 						<img src={desktop} className="img-fluid" alt={desktop} />
 					</div>
-					<div className="col-md-5">
+					<div className="col-md-5 bg-light subscribe-now">
 						<h1>Subscribe Now</h1>
 						<form className="form-inline">
 							<input
 								type="password"
-								className="form-control"
+								className="form-control mr-2 "
 								id="inputPassword2"
 								placeholder="Password"
 							/>
-							<button type="submit" className="btn btn-primary ">
+							<button type="submit" className="btn btn-dark">
 								Subscribe
 							</button>
 						</form>

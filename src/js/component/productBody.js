@@ -37,7 +37,7 @@ export const ProductBody = ({ product, title, description, other, productImage }
 					</div>
 				</div>
 				<div className="col-md-5 product-image">
-					<img src={productImage} className="img-fluid" alt={productImage} />
+					<img src={productImage} style={{ width: 300 }} className="img-fluid" alt={productImage} />
 				</div>
 			</div>
 		</div>
