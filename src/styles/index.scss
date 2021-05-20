@@ -29,13 +29,35 @@ body {
   }
 }
 
+.product-body {
+  background: linear-gradient(to right, rgba(252, 247, 247, 0.925), white);
+}
+
 @media (max-width: 800px) {
   .container ul {
     flex-direction: row;
-    // justify-content: ;
-    // align items
   }
   .container ul li {
     margin: 10px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .content-wrapper {
+    position: relative;
+  }
+
+  .product-body {
+    max-height: 500px;
+  }
+
+  .product-image {
+    position: absolute;
+    top: 0;
+    right: 10px;
+  }
+
+  .right-side-icons {
+    justify-content: flex-end;
   }
 }
