@@ -1,13 +1,25 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "../../styles/signup.scss";
+import { Context } from "../store/appContext";
+import { useHistory } from "react-router-dom";
 
 export const SignIn = () => {
+	const history = useHistory();
+	const { store, actions } = useContext(Context);
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
 
-	const handleSubmit = e => {
+	const handleSubmit = async e => {
 		e.preventDefault();
-		console.log(email, password);
+		const result = await actions.signIn({
+			email,
+			password
+		});
+
+		if (result.length > 0) {
+			localStorage.setItem("logedIn", true);
+			history.push("/");
+		}
 	};
 
 	return (
