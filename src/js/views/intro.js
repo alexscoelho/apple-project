@@ -10,9 +10,10 @@ export const Intro = () => (
 			</Link>
 		</nav>
 		<div className="apple-container">
-			<i className="fab fa-apple fa-2x fa-10x big-logo" />
-			<p className="message">New products comming this summer</p>
-			<h1 className="date">2019</h1>
+			<div className="logo">
+				<p className="message">New products comming this summer</p>
+			</div>
+			<h1>2019</h1>
 		</div>
 	</>
 );
