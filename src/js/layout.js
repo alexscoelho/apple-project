@@ -15,6 +15,7 @@ import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
+import { PrivateRoute } from "./component/PrivateRoute";
 
 //create your first component
 const Layout = () => {
@@ -28,24 +29,24 @@ const Layout = () => {
 				<ScrollToTop>
 					{/* <Navbar /> */}
 					<Switch>
-						<Route exact path="/">
+						<PrivateRoute exact path="/">
 							<Intro />
-						</Route>
-						<Route exact path="/home">
+						</PrivateRoute>
+						<PrivateRoute exact path="/home">
 							<Home />
-						</Route>
-						<Route exact path="/mackbook">
+						</PrivateRoute>
+						<PrivateRoute exact path="/mackbook">
 							<Navbar />
 							<Mackbook />
-						</Route>
-						<Route exact path="/phone">
+						</PrivateRoute>
+						<PrivateRoute exact path="/phone">
 							<Navbar />
 							<Phone />
-						</Route>
-						<Route exact path="/watch">
+						</PrivateRoute>
+						<PrivateRoute exact path="/watch">
 							<Navbar />
 							<Watch />
-						</Route>
+						</PrivateRoute>
 						<Route exact path="/signin">
 							<SignIn />
 						</Route>

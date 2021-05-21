@@ -18,6 +18,7 @@ export const SignIn = () => {
 
 		if (result.length > 0) {
 			localStorage.setItem("logedIn", true);
+			actions.setLoggedIn();
 			history.push("/");
 		}
 	};

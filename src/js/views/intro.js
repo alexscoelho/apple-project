@@ -1,8 +1,17 @@
 import React from "react";
-import "../../styles/home.scss";
+import "../../styles/intro.scss";
+import { Link } from "react-router-dom";
 
 export const Intro = () => (
-	<div className="text-center mt-5">
-		<h1>Intro</h1>
-	</div>
+	<>
+		<nav className="navbar navbar-light intro-nav justify-content-center">
+			<Link to="/">
+				<i className="fab fa-apple fa-2x apple" />
+			</Link>
+		</nav>
+		<div className="apple-container">
+			<i className="fab fa-apple fa-2x fa-10x big-logo" />
+			<p className="message">New products comming this summer</p>
+		</div>
+	</>
 );

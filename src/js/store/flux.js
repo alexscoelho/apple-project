@@ -22,6 +22,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 				const validUser = store.validUsers.filter(user => user.email === email && user.password === password);
 				return validUser;
 			},
+			setLoggedIn: () => {
+				const store = getStore();
+				store.isLogedIn = true;
+			},
 			// Use getActions to call a function within a fuction
 			exampleFunction: () => {
 				getActions().changeColor(0, "green");
