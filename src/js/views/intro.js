@@ -12,6 +12,7 @@ export const Intro = () => (
 		<div className="apple-container">
 			<i className="fab fa-apple fa-2x fa-10x big-logo" />
 			<p className="message">New products comming this summer</p>
+			<h1 className="date">2019</h1>
 		</div>
 	</>
 );

@@ -33,6 +33,7 @@ const Layout = () => {
 							<Intro />
 						</PrivateRoute>
 						<PrivateRoute exact path="/home">
+							<Navbar />
 							<Home />
 						</PrivateRoute>
 						<PrivateRoute exact path="/mackbook">

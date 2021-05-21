@@ -6,6 +6,7 @@
 }
 
 .apple-container {
+  position: relative;
   height: 400px;
   width: 90%;
   margin: 5px auto;
@@ -18,4 +19,18 @@
   position: absolute;
   top: 20%;
   transform: translateX(-45%);
+}
+
+.message {
+  z-index: 100;
+  position: absolute;
+  top: 170px;
+  left: 325px;
+  left: 500px;
+}
+
+.date {
+  position: absolute;
+  top: 450px;
+  left: 600px;
 }

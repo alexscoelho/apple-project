@@ -1,0 +1,29 @@
+.apple-container-home {
+  position: relative;
+  height: 100vh;
+  width: 90%;
+  margin: 5px auto;
+  background: linear-gradient(to right, rgba(190, 192, 194, 0.842), white);
+  text-align: center;
+}
+
+.big-logo-home {
+  color: grey;
+  position: absolute;
+  top: 20%;
+  transform: translateX(-45%);
+}
+
+.message {
+  z-index: 100;
+  position: absolute;
+  top: 170px;
+  left: 325px;
+  left: 500px;
+}
+
+.date {
+  position: absolute;
+  top: 450px;
+  left: 600px;
+}
