@@ -38,11 +38,11 @@
 // }
 
 .vertical-icon-list {
-  // position: absolute;
-  // top: 550px;
-  // left: 610px;
   list-style-type: none;
   overflow: hidden;
+  z-index: 999;
+  display: inline-block;
+  margin-top: 40px;
 }
 
 li {
@@ -59,10 +59,10 @@ li a {
 
 .apple-container-home {
   text-align: center;
-  height: 400px;
+  // height: 400px;
   width: 90%;
   margin: 5px auto;
-  background: linear-gradient(to right, rgba(190, 192, 194, 0.842), white);
+  background: linear-gradient(to bottom, rgba(190, 192, 194, 0.842), white);
 }
 
 .logo-home {
@@ -71,7 +71,7 @@ li a {
   width: 200px;
   position: relative;
   top: 50%;
-  transform: translateY(-50%);
+  // transform: translateY(-50%);
 }
 
 .logo-home:before {
@@ -85,9 +85,10 @@ li a {
 .message-home {
   margin: 0;
   text-align: center;
-  width: 300px;
+  width: 400px;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  right: -51px;
+  right: -106px;
+  font-weight: 600;
 }
