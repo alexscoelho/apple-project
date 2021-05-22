@@ -2,7 +2,6 @@ import React from "react";
 import { IoWatch } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
-import { useTransition, animated } from "react-spring";
 
 export const ProductBody = ({ product, title, description, other, productImage }) => {
 	return (
