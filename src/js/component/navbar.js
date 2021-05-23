@@ -31,7 +31,7 @@ export const Navbar = () => {
 						Watch
 					</Link>
 					<Link className="mr-5" to="/">
-						<div className="btn btn-primary">Notify me</div>
+						<div className="btn notify-button">Notify me</div>
 					</Link>
 				</div>
 			</div>

@@ -5,14 +5,16 @@
 .small-phone2 {
   margin-right: 10px;
   height: 100px;
+  opacity: 0.3;
 }
 
 .small-images {
   overflow-x: auto;
   overflow-y: hidden;
   white-space: nowrap;
-  width: 50px;
+  width: 100px;
   padding-bottom: 20px;
+  margin-left: 30px;
 }
 
 ::-webkit-scrollbar {

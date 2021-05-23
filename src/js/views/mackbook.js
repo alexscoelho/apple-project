@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { IoWatch } from "react-icons/io5";
 import mackbook from "../../img/shutterstock_-1.png";
+import mackbook2 from "../../img/mackbook-4.png";
 import desktop from "../../img/shutterstock_-2.png";
 import "../../styles/mackbook.scss";
 
@@ -27,7 +28,12 @@ export const Mackbook = () => {
 							</div>
 						</div>
 						<div className="col-md-5 image-box">
-							<img style={{ height: 300 }} src={mackbook} className="img-fluid mackbook" alt={mackbook} />
+							<img
+								style={{ height: 300 }}
+								src={mackbook2}
+								className="img-fluid mackbook"
+								alt={mackbook}
+							/>
 						</div>
 						<div className="col-sm d-flex align-items-center">
 							<ul className="right-side-icons">

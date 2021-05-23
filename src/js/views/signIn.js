@@ -8,6 +8,7 @@ export const SignIn = () => {
 	const { store, actions } = useContext(Context);
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
+	const [message, setMessage] = useState(null);
 
 	const handleSubmit = async e => {
 		e.preventDefault();
@@ -20,12 +21,19 @@ export const SignIn = () => {
 			localStorage.setItem("logedIn", true);
 			actions.setLoggedIn();
 			history.push("/");
+		} else {
+			setMessage("enter a valid email or password");
 		}
 	};
 
 	return (
 		<div className="container ">
 			<div className="row justify-content-center">
+				{message && (
+					<div className="alert alert-danger" role="alert">
+						{message}
+					</div>
+				)}
 				<div className="col-md-3 border p-5 sign-up-form shadow-sm">
 					<h2 className="signup-title">Sign-in</h2>
 					<form onSubmit={handleSubmit}>
@@ -48,7 +56,7 @@ export const SignIn = () => {
 							/>
 						</div>
 						<div className="sign-up-button">
-							<button type="submit" className="btn btn-primary">
+							<button type="submit" className="btn btn-dark">
 								Sign-In
 							</button>
 						</div>

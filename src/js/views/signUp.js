@@ -26,7 +26,7 @@ export const SignUp = () => {
 							<input type="password" className="form-control" id="exampleInputPassword1" />
 						</div>
 						<div className="sign-up-button">
-							<button type="submit" className="btn btn-primary">
+							<button type="submit" className="btn btn-dark">
 								Sign-Up
 							</button>
 						</div>
