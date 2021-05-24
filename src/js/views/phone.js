@@ -7,6 +7,17 @@ import smallPhone1 from "../../img/apple-iphonexs-max-gold.png";
 import smallPhone2 from "../../img/apple-iphonexs-max-gold-back-3.png";
 
 export const Phone = () => {
+	const [pixels, setPixels] = useState(0);
+	const hadleScroll = e => {
+		setPixels(e.target.scrollLeft);
+	};
+
+	const smallImageStyle = { opacity1: 0.3, opacity2: 1 };
+	if (pixels === 0) {
+		smallImageStyle.opacity1 = 1;
+		smallImageStyle.opacity2 = 0.3;
+	}
+
 	return (
 		<>
 			<ProductBody
@@ -16,6 +27,7 @@ export const Phone = () => {
 				other="Starts shipping MM-DD-YYY"
 				productImage={frontPhone}
 				productImage2={goldPhone}
+				pixels={pixels}
 			/>
 			<div className="container">
 				<div className="row">
@@ -24,9 +36,19 @@ export const Phone = () => {
 						<p className="text-danger">Buy Now </p>
 					</div>
 
-					<div className="small-images">
-						<img src={smallPhone1} className="img-fluid small-phone1" alt={smallPhone1} />
-						<img src={smallPhone2} className="img-fluid small-phone2" alt={smallPhone2} />
+					<div className="small-images" onScroll={e => hadleScroll(e)}>
+						<img
+							style={{ opacity: smallImageStyle.opacity1 }}
+							src={smallPhone1}
+							className="img-fluid small-phone1"
+							alt={smallPhone1}
+						/>
+						<img
+							style={{ opacity: smallImageStyle.opacity2 }}
+							src={smallPhone2}
+							className="img-fluid small-phone2"
+							alt={smallPhone2}
+						/>
 					</div>
 				</div>
 			</div>

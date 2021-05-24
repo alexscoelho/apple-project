@@ -79,3 +79,27 @@ body {
   background-color: rgb(90, 200, 250);
   color: white;
 }
+
+.slider {
+  position: relative;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  width: 200px;
+  border-radius: 10px;
+}
+
+.slide {
+  opacity: 0;
+  transition-duration: 1s ease;
+}
+
+.slide.active {
+  opacity: 1;
+  transition-duration: 1s;
+  transform: scale(1.08);
+}

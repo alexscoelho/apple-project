@@ -1,9 +1,30 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { IoWatch } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
-export const ProductBody = ({ product, title, description, other, productImage, productImage2 }) => {
+export const ProductBody = ({ product, title, description, other, productImage, productImage2, pixels }) => {
+	const sliderData = [productImage2, productImage];
+	const [current, setCurrent] = useState(0);
+	const length = sliderData.length;
+
+	const nextSlide = () => {
+		setCurrent(current === length - 1 ? 0 : current + 1);
+	};
+	const prevSlide = () => {
+		setCurrent(current === 0 ? length - 1 : current - 1);
+	};
+
+	useEffect(
+		() => {
+			if (pixels === 0) {
+				nextSlide();
+			} else if (pixels === 20) {
+				prevSlide();
+			}
+		},
+		[pixels]
+	);
 	return (
 		<div className="jumbotron jumbotron-fluid product-body">
 			<div className="content-wrapper">
@@ -38,7 +59,15 @@ export const ProductBody = ({ product, title, description, other, productImage, 
 				</div>
 
 				<div className="col-md-5 product-image">
-					<div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
+					<section className="slider">
+						{sliderData.map((image, index) => {
+							return (
+								<div className={index === current ? "slide active" : "slide"} key={index}>
+									{index === current && <img src={image} alt="phone" className="image img-fluid" />}
+								</div>
+							);
+						})}
+						{/* <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
 						<div className="carousel-inner">
 							<div className="carousel-item active">
 								<img className="d-block w-50" src={productImage} alt="First slide" />
@@ -47,7 +76,9 @@ export const ProductBody = ({ product, title, description, other, productImage, 
 								<img className="d-block w-50" src={productImage2} alt="Second slide" />
 							</div>
 						</div>
-					</div>
+					</div> */}
+						{/* </div> */}
+					</section>
 				</div>
 			</div>
 		</div>
@@ -60,5 +91,6 @@ ProductBody.propTypes = {
 	description: PropTypes.string,
 	other: PropTypes.string,
 	productImage: PropTypes.string,
-	productImage2: PropTypes.string
+	productImage2: PropTypes.string,
+	pixels: PropTypes.number
 };
