@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { ProductBody } from "../component/productBody";
 import goldPhone from "../../img/apple-iphonexs-max-gold-back-2.png";
-import frontPhone from "../../img/Iphone 1@2x.png";
+import frontPhone from "../../img/front-phone-trans.png";
 import "../../styles/phone.scss";
 import smallPhone1 from "../../img/apple-iphonexs-max-gold.png";
 import smallPhone2 from "../../img/apple-iphonexs-max-gold-back-3.png";

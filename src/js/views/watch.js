@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { ProductBody } from "../component/productBody";
-import blackWatch from "../../img/Black Watch-1.png";
-import whiteWatch from "../../img/White Watch-2.png";
+import blackWatch from "../../img/balck-watch-trans.png";
+import whiteWatch from "../../img/white-watch-trans.png";
 import { motion } from "framer-motion";
 
 export const Watch = () => {
