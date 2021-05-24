@@ -22,19 +22,19 @@ export const SignIn = () => {
 			actions.setLoggedIn();
 			history.push("/");
 		} else {
-			setMessage("enter a valid email or password");
+			setMessage("Enter a Valid Email or Eassword");
 		}
 	};
 
 	return (
 		<div className="container ">
-			<div className="row justify-content-center">
+			<div className="row justify-content-center ">
 				{message && (
 					<div className="alert alert-danger" role="alert">
 						{message}
 					</div>
 				)}
-				<div className="col-md-3 border p-5 sign-up-form shadow-sm">
+				<div className="col-md-3 border p-5 sign-up-form shadow-sm bg-white">
 					<h2 className="signup-title">Sign-in</h2>
 					<form onSubmit={handleSubmit}>
 						<div className="form-group">

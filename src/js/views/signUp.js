@@ -5,7 +5,7 @@ export const SignUp = () => {
 	return (
 		<div className="container ">
 			<div className="row justify-content-center">
-				<div className="col-md-3 border p-5 sign-up-form shadow-sm">
+				<div className="col-md-3 border p-5 sign-up-form shadow-sm bg-white">
 					<h2 className="signup-title">Sign-up</h2>
 					<form>
 						<div className="form-group">
