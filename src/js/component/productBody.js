@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { IoWatch } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
+import { motion } from "framer-motion";
 
 export const ProductBody = ({ product, title, description, other, productImage, productImage2, pixels }) => {
 	const sliderData = [productImage2, productImage];
@@ -58,8 +59,18 @@ export const ProductBody = ({ product, title, description, other, productImage, 
 					</div>
 				</div>
 				{product === "Apple Watch" ? (
-					<div className="col-md-5 product-image">
-						<img src={productImage} style={{ width: 300 }} className="img-fluid" alt={productImage} />
+					<div className="col-md-5 product-image ">
+						<motion.img
+							key={productImage}
+							src={productImage}
+							initial={{ msTransitionDuration: `${2}s`, opacity: 0 }}
+							animate={{ msTransitionDuration: `${4}s`, opacity: 1 }}
+							exit={{ msTransitionDuration: `${0}s`, opacity: 0 }}
+							style={{ width: 300 }}
+							className="img-fluid "
+							alt={productImage}
+						/>
+						{/* <img src={productImage} style={{ width: 300 }} className="img-fluid " alt={productImage} /> */}
 					</div>
 				) : (
 					<div className="col-md-5 product-image">
