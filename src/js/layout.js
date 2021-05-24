@@ -18,7 +18,6 @@ import { Footer } from "./component/footer";
 import { PrivateRoute } from "./component/PrivateRoute";
 import { AnimatePresence } from "framer-motion";
 
-//create your first component
 const Layout = () => {
 	//the basename is used when your project is published in a subdirectory and not in the root of the domain
 	// you can set the basename on the .env file located at the root of this project, E.g: BASENAME=/react-hello-webapp/
@@ -29,7 +28,6 @@ const Layout = () => {
 		<div className="d-flex flex-column">
 			<BrowserRouter basename={basename}>
 				<ScrollToTop>
-					{/* <Navbar /> */}
 					<AnimatePresence exitBeforeEnter>
 						<Switch location={path} key={path.pathname}>
 							<PrivateRoute exact path="/">
@@ -57,18 +55,11 @@ const Layout = () => {
 							<Route exact path="/signup">
 								<SignUp />
 							</Route>
-							<Route exact path="/demo">
-								<Demo />
-							</Route>
-							<Route exact path="/single/:theid">
-								<Single />
-							</Route>
 							<Route>
 								<h1>Not found!</h1>
 							</Route>
 						</Switch>
 					</AnimatePresence>
-					{/* <Footer /> */}
 				</ScrollToTop>
 			</BrowserRouter>
 		</div>

@@ -9,7 +9,7 @@ export const Home = () => (
 			<div className="logo-home">
 				<h2 className="message-home">Welcome to Apple</h2>
 			</div>
-			<p className="message-home2 text-info">See Our Products</p>
+			<p className="message-home2 ">See Our Products</p>
 			<ul className="vertical-icon-list ">
 				<li>
 					<Link to="/phone">

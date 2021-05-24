@@ -66,7 +66,7 @@ export const Mackbook = () => {
 				<div className="container">
 					<div className="row">
 						<div className="col-md-2">
-							<p className="text-danger">Buy Now </p>
+							<p className=" buy-now">Buy Now </p>
 						</div>
 						<div className="col-md-5">
 							<img src={desktop} className="img-fluid" alt={desktop} />
