@@ -57,29 +57,25 @@ export const ProductBody = ({ product, title, description, other, productImage, 
 						</div>
 					</div>
 				</div>
-
-				<div className="col-md-5 product-image">
-					<section className="slider">
-						{sliderData.map((image, index) => {
-							return (
-								<div className={index === current ? "slide active" : "slide"} key={index}>
-									{index === current && <img src={image} alt="phone" className="image img-fluid" />}
-								</div>
-							);
-						})}
-						{/* <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
-						<div className="carousel-inner">
-							<div className="carousel-item active">
-								<img className="d-block w-50" src={productImage} alt="First slide" />
-							</div>
-							<div className="carousel-item">
-								<img className="d-block w-50" src={productImage2} alt="Second slide" />
-							</div>
-						</div>
-					</div> */}
-						{/* </div> */}
-					</section>
-				</div>
+				{product === "Apple Watch" ? (
+					<div className="col-md-5 product-image">
+						<img src={productImage} style={{ width: 300 }} className="img-fluid" alt={productImage} />
+					</div>
+				) : (
+					<div className="col-md-5 product-image">
+						<section className="slider">
+							{sliderData.map((image, index) => {
+								return (
+									<div className={index === current ? "slide active" : "slide"} key={index}>
+										{index === current && (
+											<img src={image} alt="phone" className="image img-fluid" />
+										)}
+									</div>
+								);
+							})}
+						</section>
+					</div>
+				)}
 			</div>
 		</div>
 	);
